@@ -27,6 +27,11 @@ html {
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--cream);
+  position: relative;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 /* Design image positioning while developing */
