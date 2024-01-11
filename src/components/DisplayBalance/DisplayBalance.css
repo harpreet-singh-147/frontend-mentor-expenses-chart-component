@@ -17,5 +17,6 @@
 
 .balance__amount {
   padding-top: 0.6rem;
-  font-size: 3.35rem;
+  font-size: 3.15rem;
+  font-weight: 700;
 }

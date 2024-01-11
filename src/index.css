@@ -9,6 +9,7 @@
   --medium-brown: hsl(28, 10%, 53%);
   --cream: hsl(27, 66%, 92%);
   --very-pale-orange: hsl(33, 100%, 98%);
+  --seperator-color: #cccccc8c;
 }
 
 html {
@@ -42,7 +43,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-image: url('../design/desktop-design.jpg'); */
+  /* background-image: url('../design/active-states.jpg'); */
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center center;

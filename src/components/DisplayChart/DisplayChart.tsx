@@ -11,7 +11,19 @@ const DisplayChart = () => {
       <div className='chart__container'>
         <BarChart />
       </div>
-      $478.33 +2.4% from last month
+      <footer className='chart__footer'>
+        <h3 className='chart__footer-heading'>Total this month</h3>
+        <div className='chart__footer-content'>
+          <div className='chart__footer-line-seperator'></div>
+          <p className='chart__footer-total'>$478.33</p>
+          <p className='chart__footer-difference-container'>
+            <span className='chart__footer__difference-percentage'>+2.4%</span>
+            <span className='chart__footer__difference-description'>
+              from last month
+            </span>
+          </p>
+        </div>
+      </footer>
     </section>
   );
 };
