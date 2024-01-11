@@ -28,5 +28,3 @@ const DisplayChart = () => {
   );
 };
 export default DisplayChart;
-
-//  mon tue wed thu fri sat sun Total this month

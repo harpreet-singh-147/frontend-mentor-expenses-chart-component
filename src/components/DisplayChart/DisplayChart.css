@@ -4,11 +4,13 @@
   height: 510px;
   border-radius: 2em;
   padding: 0 3rem;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
 }
 
 .chart__header {
   padding-top: 3.1rem;
   padding-left: 1rem;
+  margin-bottom: 0.87rem;
 }
 
 .chart__heading {
@@ -17,11 +19,14 @@
 }
 
 .chart__container {
-  padding-top: 0.9rem;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  height: 240px;
 }
 
 .chart__footer {
-  padding: 6.1rem 1.1rem 0 1.1rem;
+  padding: 6.3rem 1.1rem 0 1.1rem;
 }
 
 .chart__footer-heading {
@@ -70,4 +75,112 @@
   font-size: 1.8rem;
   color: var(--medium-brown);
   font-weight: 400;
+}
+
+@media only screen and (max-width: 560px) {
+  .chart {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .chart {
+    height: auto;
+    padding: 4rem 2.5rem;
+    border-radius: 1.2em;
+  }
+
+  .chart__header {
+    padding: 0;
+  }
+
+  .chart__heading {
+    font-size: 2.8rem;
+  }
+
+  .chart__footer-total {
+    font-size: 3.5rem;
+  }
+
+  .chart__footer__difference-percentage {
+    margin-top: -0.8rem;
+  }
+
+  .chart__footer__difference-description {
+    margin-top: -0.1rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .chart {
+    padding: 4rem 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .chart__heading {
+    font-size: 2.6rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .chart {
+    padding: 4rem 1.5rem;
+  }
+
+  .chart__header {
+    padding: 0;
+  }
+
+  .chart__heading {
+    font-size: 2.4rem;
+  }
+
+  .chart__footer {
+    padding: 6.3rem 0 0 0;
+  }
+
+  .chart__footer-heading {
+    font-size: 1.5rem;
+  }
+
+  .chart__footer-total {
+    font-size: 2.9rem;
+  }
+
+  .chart__footer__difference-description {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .chart {
+    padding: 4rem 1rem;
+  }
+  .chart__heading {
+    font-size: 2.3rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 310px) {
+  .chart {
+    padding: 4rem 1rem;
+  }
+  .chart__heading {
+    font-size: 2rem;
+  }
+
+  .chart__footer-heading {
+    font-size: 1.3rem;
+  }
+
+  .chart__footer-total {
+    font-size: 2.6rem;
+  }
+
+  .chart__footer__difference-description {
+    font-size: 1.3rem;
+  }
 }
