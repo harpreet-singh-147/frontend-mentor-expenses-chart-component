@@ -1,5 +1,5 @@
 import DisplayBalance from './components/DisplayBalance/DisplayBalance';
-import DisplayChart from './components/DIsplayChart/DisplayChart';
+import DisplayChart from './components/DisplayChart/DisplayChart';
 import Footer from './components/Footer/Footer';
 
 import './App.css';

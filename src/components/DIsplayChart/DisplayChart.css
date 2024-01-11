@@ -1,8 +1,0 @@
-.chart {
-  background: var(--very-pale-orange);
-  outline: 1px solid red;
-  width: 540px;
-  height: 510px;
-  border-radius: 2em;
-  position: relative;
-}

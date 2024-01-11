@@ -4,13 +4,15 @@ import './DisplayChart.css';
 
 const DisplayChart = () => {
   return (
-    <div className='chart'>
+    <section className='chart'>
       <header className='chart__header'>
         <h1 className='chart__heading'>Spending - Last 7 days</h1>
       </header>
-      <BarChart />
+      <div className='chart__container'>
+        <BarChart />
+      </div>
       $478.33 +2.4% from last month
-    </div>
+    </section>
   );
 };
 export default DisplayChart;

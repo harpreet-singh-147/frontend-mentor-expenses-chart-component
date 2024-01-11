@@ -23,6 +23,19 @@ ChartJS.register(
 
 const labels = jsonData.map(item => item.day);
 const dataValues = jsonData.map(item => item.amount);
+const currentDay = new Date()
+  .toLocaleDateString('en-us', { weekday: 'short' })
+  .toLowerCase();
+
+const barColors = jsonData.map(item =>
+  item.day === currentDay ? 'hsl(186, 34%, 60%)' : 'hsl(10, 79%, 65%)'
+);
+
+const hoverColors = jsonData.map(item =>
+  item.day === currentDay
+    ? 'hsla(186, 34%, 60%, 0.613)'
+    : 'hsla(10, 79%, 65%, 0.631)'
+);
 
 export const options = {
   responsive: true,
@@ -48,6 +61,7 @@ export const options = {
       yAlign: 'bottom' as const,
       bodyFont: {
         size: 15.5,
+        weight: 'bold' as const,
       },
     },
   },
@@ -59,6 +73,9 @@ export const options = {
       },
       ticks: {
         display: true,
+        font: {
+          size: 15.5,
+        },
       },
       border: {
         display: false,
@@ -72,6 +89,8 @@ export const options = {
       ticks: {
         display: false,
       },
+      min: 0,
+      max: 73,
     },
   },
 };
@@ -82,7 +101,10 @@ const data = {
     {
       label: '',
       data: dataValues,
-      backgroundColor: 'hsl(10, 79%, 65%)',
+      backgroundColor: barColors,
+      borderRadius: 5.5,
+      borderSkipped: false,
+      hoverBackgroundColor: hoverColors,
     },
   ],
 };

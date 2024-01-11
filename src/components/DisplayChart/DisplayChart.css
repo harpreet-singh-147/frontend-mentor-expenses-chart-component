@@ -1,0 +1,22 @@
+.chart {
+  background: var(--very-pale-orange);
+  outline: 1px solid red;
+  width: 540px;
+  height: 510px;
+  border-radius: 2em;
+  padding: 0 3rem;
+}
+
+.chart__header {
+  padding-top: 3.1rem;
+  padding-left: 1rem;
+}
+
+.chart__heading {
+  font-size: 3.15rem;
+}
+
+.chart__container {
+  padding-top: 0.9rem;
+  outline: 1px solid red;
+}
