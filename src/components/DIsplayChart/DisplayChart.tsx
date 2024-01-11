@@ -1,3 +1,5 @@
+import BarChart from '../BarChart/BarChart';
+
 import './DisplayChart.css';
 
 const DisplayChart = () => {
@@ -6,8 +8,11 @@ const DisplayChart = () => {
       <header className='chart__header'>
         <h1 className='chart__heading'>Spending - Last 7 days</h1>
       </header>
-      mon tue wed thu fri sat sun Total this month $478.33 +2.4% from last month
+      <BarChart />
+      $478.33 +2.4% from last month
     </div>
   );
 };
 export default DisplayChart;
+
+//  mon tue wed thu fri sat sun Total this month
