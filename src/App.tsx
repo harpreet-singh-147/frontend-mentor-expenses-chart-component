@@ -7,9 +7,11 @@ import './App.css';
 function App() {
   return (
     <main className='main'>
-      <DisplayBalance />
-      <DisplayChart />
-      <Footer />
+      <div className='container'>
+        <DisplayBalance />
+        <DisplayChart />
+        <Footer />
+      </div>
     </main>
   );
 }
