@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,7 +11,8 @@ import {
   ChartEvent,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-import jsonData from '../../assets/data.json';
+import { weeklyData } from '../../assets/data.json';
+
 import './BarChart.css';
 
 ChartJS.register(
@@ -23,17 +25,20 @@ ChartJS.register(
 );
 
 const BarChart = () => {
-  const labels = jsonData.map(({ day }) => day);
-  const dataValues = jsonData.map(({ amount }) => amount);
+  const [chartData] = useState({
+    labels: weeklyData.map(({ day }) => day),
+    dataValues: weeklyData.map(({ amount }) => amount),
+  });
+
   const currentDay = new Date()
     .toLocaleDateString('en-us', { weekday: 'short' })
     .toLowerCase();
 
-  const barColors = jsonData.map(({ day }) =>
+  const barColors = weeklyData.map(({ day }) =>
     day === currentDay ? 'hsl(186, 34%, 60%)' : 'hsl(10, 79%, 65%)'
   );
 
-  const hoverColors = jsonData.map(({ day }) =>
+  const hoverColors = weeklyData.map(({ day }) =>
     day === currentDay
       ? 'hsla(186, 34%, 60%, 0.613)'
       : 'hsla(10, 79%, 65%, 0.631)'
@@ -112,11 +117,11 @@ const BarChart = () => {
   };
 
   const data = {
-    labels,
+    labels: chartData.labels,
     datasets: [
       {
         label: '',
-        data: dataValues,
+        data: chartData.dataValues,
         backgroundColor: barColors,
         borderRadius: window.innerWidth <= 475 ? 3.5 : 5.5,
         borderSkipped: false,
