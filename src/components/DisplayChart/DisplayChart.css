@@ -22,7 +22,7 @@
   width: 100%;
   position: relative;
   margin: auto;
-  height: 240px;
+  min-height: 240px;
 }
 
 .chart__footer {
