@@ -1,3 +1,4 @@
+import AccessibilityTable from './components/AccessibilityTable/AccessibilityTable';
 import DisplayBalance from './components/DisplayBalance/DisplayBalance';
 import DisplayChart from './components/DisplayChart/DisplayChart';
 import Footer from './components/Footer/Footer';
@@ -10,6 +11,7 @@ function App() {
       <div className='container'>
         <DisplayBalance />
         <DisplayChart />
+        <AccessibilityTable />
         <Footer />
       </div>
     </main>
