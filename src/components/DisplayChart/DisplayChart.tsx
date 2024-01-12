@@ -1,3 +1,7 @@
+import {
+  totalMonthlySpend,
+  monthlyPercentageChange,
+} from '../../assets/data.json';
 import BarChart from '../BarChart/BarChart';
 
 import './DisplayChart.css';
@@ -15,9 +19,11 @@ const DisplayChart = () => {
         <h3 className='chart__footer-heading'>Total this month</h3>
         <div className='chart__footer-content'>
           <div className='chart__footer-line-seperator'></div>
-          <p className='chart__footer-total'>$478.33</p>
+          <p className='chart__footer-total'>${totalMonthlySpend.toFixed(2)}</p>
           <p className='chart__footer-difference-container'>
-            <span className='chart__footer__difference-percentage'>+2.4%</span>
+            <span className='chart__footer__difference-percentage'>
+              +{monthlyPercentageChange.toFixed(1)}%
+            </span>
             <span className='chart__footer__difference-description'>
               from last month
             </span>
