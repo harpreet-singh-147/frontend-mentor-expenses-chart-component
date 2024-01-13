@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -29,6 +29,15 @@ const BarChart = () => {
     labels: weeklyData.map(({ day }) => day),
     dataValues: weeklyData.map(({ amount }) => amount),
   });
+
+  const chartRef = useRef<ChartJS<'bar', number[], string> | null>(null);
+
+  useEffect(() => {
+    if (chartRef.current) {
+      const canvas = chartRef.current.canvas;
+      canvas.setAttribute('alt', 'Weekly spending in a bar chart form');
+    }
+  }, []);
 
   const currentDay = new Date()
     .toLocaleDateString('en-us', { weekday: 'short' })
@@ -129,6 +138,6 @@ const BarChart = () => {
       },
     ],
   };
-  return <Bar data={data} options={options} />;
+  return <Bar ref={chartRef} data={data} options={options} />;
 };
 export default BarChart;
