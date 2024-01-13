@@ -35,7 +35,7 @@ const BarChart = () => {
   useEffect(() => {
     if (chartRef.current) {
       const canvas = chartRef.current.canvas;
-      canvas.setAttribute('alt', 'Weekly spending in a bar chart form');
+      canvas.setAttribute('aria-label', 'Weekly spending in a bar chart form');
     }
   }, []);
 
