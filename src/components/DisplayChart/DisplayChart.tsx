@@ -16,7 +16,7 @@ const DisplayChart = () => {
         <BarChart />
       </div>
       <footer className='chart__footer'>
-        <h3 className='chart__footer-heading'>Total this month</h3>
+        <h2 className='chart__footer-heading'>Total this month</h2>
         <div className='chart__footer-content'>
           <div className='chart__footer-line-seperator'></div>
           <p className='chart__footer-total'>${totalMonthlySpend.toFixed(2)}</p>
